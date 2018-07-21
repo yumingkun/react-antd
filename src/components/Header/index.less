@@ -1,4 +1,7 @@
+@import "./../../style/default.less";
+
 .header{
+  background-color: @colorM;
   font-size: 16px;
   .header-top{
     height: 60px;
@@ -17,12 +20,28 @@
     padding: 0 30px;
     .breadcrumb-title{
         text-align: center;
+      //用 csssh实现小箭头
+      &:after{
+        position: absolute;
+        content: '';
+        border-top: 12px solid @colorM ;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        top: 38px;
+        left: 70px;
+      }
 
     }
     .weather{
       text-align: right;
       .date{
         margin-right: 40px;
+      }
+      .weather-img{
+        img{
+          height:20px ;
+          margin-right:10px;
+        }
       }
     }
   }
