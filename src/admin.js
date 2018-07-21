@@ -3,25 +3,29 @@ import {
     Row,
     Col,
 }from 'antd';
+import './style/common.less';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import NavLeft from "./components/NavLeft";
 
 
 class Admin extends Component {
     render() {
         return (
-            <Row>
-                <Col span="3">
-                    left
+            <Row className="container">
+
+                <Col span="4" className="nav-left">
+                   <NavLeft/>
                 </Col>
 
-                <Col span="21">
+                <Col span="20" className="main">
                     <Header/>
-                    <Row>
+                    <Row className="content">
 
                     </Row>
                     <Footer/>
                 </Col>
+
             </Row>
         );
     }
